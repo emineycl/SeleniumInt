@@ -6,47 +6,51 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Q1 {
-    public static void main(String[] args) throws InterruptedException {
+
 
 
     /*...Exercise1...
-    Create a new class under Q1 create main method
-    Set Path
-    Create chrome driver
-    Maximize the window
-    Open google home page https://www.google.com/.
-    On the same class, Navigate to amazon home page https://www.amazon.com/ Navigate back to google
-    Navigate forward to amazon
-    Refresh the page
-    Close/Quit the browser
-    And last step : print "All Ok" on console
+   1- Create a new class under Q1 create main method
+    2-Set Path
+    3-Create chrome driver
+    4-Maximize the window
+    5-Open google home page https://www.google.com/.
+    6-On the same class, Navigate to amazon home page https://www.amazon.com/ Navigate back to google
+    7-Navigate forward to amazon
+    8-Refresh the page
+    9-Close/Quit the browser
+    10-And last step : print "All Ok" on console
      */
 
-        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver.exe");
+       /*1*/ public static void main(String[] args) throws InterruptedException {
+           /*2*/ System.setProperty("webdriver.chrome.driver","src/resources/chromedriver.exe");
 
-        WebDriver driver=new ChromeDriver();
+        /*3*/ WebDriver driver=new ChromeDriver();
 
-        driver.manage().window().maximize();
+      /*4*/  driver.manage().window().maximize();
 
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));  // ->ImplicitlyWait Selenium från bibliotek
 
         Thread.sleep(2000);
 
-        driver.get("https://www.google.com/");
+       /*5*/ driver.get("https://www.google.com/");
         Thread.sleep(2000);
 
-        driver.navigate().to("https://www.amazon.com/");
-        Thread.sleep(2000);
-        driver.navigate().back();
-        Thread.sleep(2000);
-        driver.navigate().forward();
-        Thread.sleep(2000);
-        driver.navigate().refresh();
+       /*6*/ driver.navigate().to("https://www.amazon.com/");
         Thread.sleep(2000);
 
-        driver.close();
+       /*7*/ driver.navigate().back();
+        Thread.sleep(2000);
 
-        System.out.println("All Ok");
+       /*8*/ driver.navigate().forward();
+        Thread.sleep(2000);
+
+        /*9*/driver.navigate().refresh();
+        Thread.sleep(2000);
+
+     /*9*/ driver.close();
+
+        /*10*/ System.out.println("All Ok");
 
 
 
