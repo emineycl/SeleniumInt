@@ -9,7 +9,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class C04_LocatorTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
     //   2. Main method oluşturun ve aşağıdaki görevi tamamlayın.
         System.setProperty("webdriver.chrome.driver","src/resources/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
@@ -28,8 +28,14 @@ public class C04_LocatorTest {
 
         System.out.println(sonucWebelementListe.get(0).getText());
 
-        System.out.println(sonucWebelementListe.size());
      //   d. Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
+
+        driver.findElement(By.className("s-image")).click();
+        /*
+        Eger bir locate ile birden fazla element bulunuyorsa
+        Selenium ilk elementi kullanir
+         */
+        Thread.sleep(5000);
 
 
 
