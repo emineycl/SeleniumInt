@@ -25,25 +25,26 @@ public class C02_Before_After {
     public void amazonTest(){
 
 
-        driver.get("htpps://www.amazon.com/");
+        driver.get("https://www.amazon.com/");
         System.out.println(driver.getTitle());
     }
 
 
     @Test
     public void facebookTest() throws InterruptedException {
-        driver.get("htpps://www.facebook.com/");
+        driver.get("https://www.facebook.com/");
         System.out.println(driver.getTitle());
 
 
     }
 @Test
     public void bestbuyTest(){
-    driver.get("htpps://www.bestbuy.com/");
+    driver.get("https://www.bestbuy.com/");
     System.out.println(driver.getTitle());
 }
 @After
     public void tearDown(){
+
        driver.close();
 }
 }

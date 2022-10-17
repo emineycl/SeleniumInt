@@ -8,6 +8,7 @@ public class C01_JUnitIlkTest {
 
     @Test
     public void test01(){
+
         System.out.println("test01");
     }
     @Test
@@ -18,6 +19,7 @@ public class C01_JUnitIlkTest {
 
     @Test
     public void test03(){
+
         System.out.println("test03");
     }
 }
