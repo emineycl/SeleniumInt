@@ -43,7 +43,6 @@ public class C01_IlkMavenTest {
         }
 
         System.out.println(sonucSayisiStr);
-        //sonuc sayisinin 100'den fazla oldugunu test edin
 
 
     //  5- Ilk urunu tiklayalim
