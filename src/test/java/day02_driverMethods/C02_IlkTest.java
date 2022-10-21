@@ -42,7 +42,8 @@ public class C02_IlkTest {
         driver.quit();
 
         /*
-        driver.
+        driver.close sadece acik olan browser'i kapatir
+        driver.quit ise test calisirken acilan tum browser'lari kapatir
          */
     }
 }

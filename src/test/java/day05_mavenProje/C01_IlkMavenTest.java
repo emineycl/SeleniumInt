@@ -18,7 +18,6 @@ public class C01_IlkMavenTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-
         //  1- https://www.amazon.com/ sayfasina gidelim
     driver.get("https://www.amazon.com/");
         //  2- arama kutusunu locate edelim
@@ -49,7 +48,7 @@ public class C01_IlkMavenTest {
 
     //  5- Ilk urunu tiklayalim
 
-        WebElement ilkUrunElementi= driver.findElement(By.xpath("(//img[@class=‘s-image’])[1]"));
+         WebElement ilkUrunElementi= driver.findElement(By.xpath("(//img[@class=‘s-image’])[1]"));
         ilkUrunElementi.click();
     //  6- Sayfadaki tum basliklari yazdiralim
     driver.navigate().back();

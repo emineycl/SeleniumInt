@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Q2 {
+public class day1_Q2 {
 
 
 /* ...Exercise2...

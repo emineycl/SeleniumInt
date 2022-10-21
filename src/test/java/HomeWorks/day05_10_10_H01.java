@@ -1,6 +1,6 @@
 package HomeWorks;
 
-public class C01_Homework_day05 {
+public class day05_10_10_H01 {
     //    1-C01_TekrarTesti isimli bir class olusturun
     //2- https://www.google.com/ adresine gidin
     //            3- cookies uyarisini kabul ederek kapatin

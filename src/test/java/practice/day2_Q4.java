@@ -1,15 +1,13 @@
 package practice;
 
-import org.bouncycastle.jcajce.provider.drbg.DRBG;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Q4 {
+public class day2_Q4 {
     /* ...Exercise4...
     Navigate to  https://testpages.herokuapp.com/styled/index.html
     Click on  Calculater under Micro Apps
