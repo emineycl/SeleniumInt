@@ -55,7 +55,6 @@ public class day05_10_10_H02 {
 
         // 7. Alisveris sepetine tiklayin
         WebElement alisverisSepeti=driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
-        alisverisSepeti.click();
 
         // 8. Sectiginiz urunun basarili olarak sepete eklendigini control edin
         WebElement sepetKontrol= driver.findElement(By.xpath("//div[@class='inventory_item_name']"));
