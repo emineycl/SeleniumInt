@@ -26,16 +26,24 @@ public class C01_HandleDropdownMenu {
     }
 
     /*
-    Dropdown menuler özel web elemenetleridir ve select tag'i iel olusturulurlar
-    1-
-    dropdown menulerden element secebilmek icin Select class'indan obje olusturmaliyiz
-     */
+           Dropdown menuler ozel web elementleridir ve select tag'i ile olusturulurlar
+           1- dropdown menuyu locate edelim
+           2- dropdown menulerden option secebilmek icin Select class'indan obje olusturmaliyiz
+              obje'ye handle etmek istedigimiz dropdown'i parametre olarak girmeliyiz
+           3- locate ettigimiz ve select objesi olusturdugumuz menuden option secmek icin
+              - index
+              - value
+              - visibletext
+              ile istedigimiz option'i secebiliriz.
+          */
     @Test
     public void dropdownTest(){
         //amazona gidin
         driver.get("https://www.Amazon.com/");
+
         //arama kutusunun solundaki search in menusunden Electronics'i secelim
-        WebElement dropdownWebelement=driver.findElement(By.id("searchDropdownBox"));
+      // WebElement dropdownWebelement=driver.findElement(By.xpath("//div[@id='nav-search-dropdown-card']"));
+         WebElement dropdownWebelement=driver.findElement(By.id("searchDropdownBox"));
         Select select= new Select(dropdownWebelement);
         select.selectByVisibleText("Electronics");
 
@@ -43,25 +51,25 @@ public class C01_HandleDropdownMenu {
         //arama cubugunu java yazip aratin
         WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Java" + Keys.ENTER);
-        //bulunan sonuc sayisinin 1000'den fazla oldugunu test edin
 
-        WebElement aramaSonucElementi= driver.findElement(By.xpath("//div[@class=‘a-section a-spacing-small a-spacing-top-small’]"));
+        //bulunan sonuc sayisinin 1000'den fazla oldugunu test edin
+        WebElement aramaSonucElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         String aramaSonucStr=aramaSonucElementi.getText();
+
       //  System.out.println(aramaSonucStr);  //1-24 of 127 results for"Java"
         //test case'in de yazdirma yapilmamali *
+
         int indexOfOf=aramaSonucStr.indexOf("of");
         int indexOfResults=aramaSonucStr.indexOf("results");
-
-        int aramaSOnucSayisiInt=Integer
+        int aramaSonucSayisiInt= Integer
                 .parseInt(aramaSonucStr
-                .substring(indexOfOf+3,indexOfResults-1));
-
-        Assert.assertTrue(aramaSOnucSayisiInt>1000);
+                        .substring(indexOfOf+3,indexOfResults-1));
+        Assert.assertTrue(aramaSonucSayisiInt>1000);
 
     }
     @After
     public void teardown(){
 
-        driver.close();
+     //   driver.close();
     }
 }

@@ -23,4 +23,11 @@ public class TestBase {
     public void tearndown(){
         driver.close();
     }
+public static void bekle(int bekelnecekSaniye) throws InterruptedException {
+        try {
+        Thread.sleep(bekelnecekSaniye*1000);
+}catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+    }
 }
