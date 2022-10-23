@@ -16,6 +16,7 @@ public class C02_MouseActions extends TestBase {
         Actions actions= new Actions(driver);
         WebElement cizgiliAlanElementi= driver.findElement(By.id("hot-spot"));
         actions.contextClick(cizgiliAlanElementi).perform();
+
         //4- Alert’te cikan yazinin “You selected a context menu” oldugunu
         //    test edelim.
         String expectedAlertYazisi="You selected a context menu";
@@ -24,11 +25,14 @@ public class C02_MouseActions extends TestBase {
                 .getText();
         Assert.assertEquals(expectedAlertYazisi,actualAlertYazisi);
         Thread.sleep(3000);
+
         //5- Tamam diyerek alert’i kapatalim
         driver.switchTo().alert().accept();
+
         //6- Elemental Selenium linkine tiklayalim
         String ilkSayfahandleDegeri= driver.getWindowHandle();
         driver.findElement(By.xpath("//*[text()='Elemental Selenium']")).click();
+
         //7- Acilan sayfada h1 taginda “Elemental Selenium” yazdigini test edelim
         // once driver'i 2.sayfaya gecirmeliyiz, bunun icin de 2.sayfanin handle degerini bulmaliyiz
         Set<String > handleDegerlerSeti= driver.getWindowHandles();

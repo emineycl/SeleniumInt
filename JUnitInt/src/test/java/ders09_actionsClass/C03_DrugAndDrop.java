@@ -18,17 +18,18 @@ public class C03_DrugAndDrop extends TestBase {
         WebElement tasinacakHedefAlan= driver.findElement(By.xpath("(//div[@id='droppable'])[1]"));
 
         Actions actions=new Actions(driver);
-        actions.dragAndDrop(tasinacakElement,tasinacakHedefAlan);
+        actions.dragAndDrop(tasinacakElement,tasinacakHedefAlan).perform();
         Thread.sleep(5000);
 
       // 3- “Drop here” yazisi yerine “Dropped!” oldugunu test edin
-        WebElement droppedYaziElementi= driver.findElement(By.xpath("//p[text()=‘Dropped!’]"));
-
-        String expectedDropeYazisi="Dropped";
+        WebElement droppedYaziElementi= driver.findElement(By.linkText("//p[text()='Dropped!']"));  //*[@id="droppable"]/p
+      /*  hocanin yaptigi sekilde calismadi */
+        String expectedDroppedYazisi="Dropped!";
         String actualDroppedYazisi=droppedYaziElementi.getText();
 
-        Assert.assertEquals(expectedDropeYazisi,actualDroppedYazisi);
+        Assert.assertEquals(expectedDroppedYazisi,actualDroppedYazisi);
         Thread.sleep(5000);
+
 
 
     }

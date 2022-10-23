@@ -23,18 +23,19 @@ public class C05_KeyboardActions extends TestBase {
         //amazon anasayfaya gidin
         driver.get("https://www.amazon.com");
 
-        //arama kutusuna Nutella yazin
-       WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
-       aramaKutusu.sendKeys("nutella");
+  /*       //arama kutusuna Nutella yazin
+        WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
+        aramaKutusu.sendKeys("nutella");
 
         //aramayi yapmak icin ENTER tusuna basin
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys(Keys.ENTER);
 
-
         //arama kutusunu temizleyelim
         aramaKutusu.clear();
 
+*/
         //arama kutusuna actions class'ini kullanarak SamsungA71 yazdirin
+        WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         Actions actions=new Actions(driver);
 
         actions.click(aramaKutusu)
@@ -48,6 +49,8 @@ public class C05_KeyboardActions extends TestBase {
                 .sendKeys("71")
                 .sendKeys(Keys.ENTER)
                 .perform();
+
+
 
 
     }

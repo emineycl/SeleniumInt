@@ -12,15 +12,15 @@ public class TestBase {
 
  public    WebDriver driver;
     @Before
-    public void setup(){
+    public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.manage().window();
+        driver.manage().window().maximize();
     }
 
     @After
-    public void tearndown(){
+    public void teardown(){
         driver.close();
     }
 public static void bekle(int bekelnecekSaniye) throws InterruptedException {
