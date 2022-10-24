@@ -21,7 +21,7 @@ public class TestBase {
 
     @After
     public void teardown(){
-        driver.close();
+        ;
     }
 public static void bekle(int bekelnecekSaniye) throws InterruptedException {
         try {

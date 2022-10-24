@@ -15,11 +15,12 @@ public class C06_FacebookKayit extends TestBase {
         //1- https://www.facebook.com adresine gidelim
     driver.get("https://www.facebook.com");
 
-    // 2- Yeni hesap olustur butonuna basalim
-    driver.findElement(By.xpath("//*[@title=‘Only allow essential cookies’]")).click();
+    // 2-cookies'i kabul edin ve  Yeni hesap olustur butonuna basalim
+    driver.findElement(By.xpath("//*[@title=\"Only allow essential cookies\"]")).click();
     driver.findElement(By.linkText("Create New Account")).click();
+
         //3- Ad, soyad, mail ve sifre kutularina deger yazalim ve kaydol tusuna basalim
-        WebElement isimKutusu= driver.findElement(By.xpath("//input[@name=‘firstname’]"));
+        WebElement isimKutusu= driver.findElement(By.xpath("//input[@name=\"firstname\"]"));
         Actions actions=new Actions(driver);
 
 

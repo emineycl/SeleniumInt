@@ -14,5 +14,7 @@ import org.junit.Test;
 
             System.out.println(faker.address().fullAddress());
             System.out.println(faker.internet().password());
+
+
         }
 }
