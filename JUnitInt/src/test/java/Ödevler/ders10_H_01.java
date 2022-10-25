@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
-public class H_01_ders10 extends TestBase {
+public class ders10_H_01 extends TestBase {
     //  “http://webdriveruniversity.com/IFrame/index.html” sayfasina gidin
     // “Our Products” butonuna basin
     //“Cameras product”i tiklayin

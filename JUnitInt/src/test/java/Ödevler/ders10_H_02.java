@@ -8,10 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-import javax.swing.*;
 import java.util.Set;
 
-public class H_02_ders10 extends TestBase {
+public class ders10_H_02 extends TestBase {
     //    1."http://webdriveruniversity.com/" adresine gidin
     //2."Login Portal" a  kadar asagi inin
     //3."Login Portal" a tiklayin

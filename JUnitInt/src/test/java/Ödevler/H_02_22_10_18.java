@@ -12,3 +12,55 @@ public class H_02_22_10_18 {
     // 5. Sonucların Les Miserables i icerdigini assert edelim
     */
     }
+
+
+
+
+    /*
+        @Before
+    public void setUp(){
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+    }
+
+     @Test
+     public void test01() throws InterruptedException {
+
+        driver.get("https://amazon.com");
+
+        WebElement allButton=driver.findElement(By.xpath("//i[@class='hm-icon nav-sprite']"));
+        allButton.click();
+        Thread.sleep(1000);
+
+        WebElement books= driver.findElement(By.xpath("//a[@data-menu-id='3']"));
+         books.click();
+         Thread.sleep(1000);
+
+         WebElement allKategori= driver.findElement(By.xpath("//ul[@class='hmenu hmenu-visible hmenu-translateX']"));
+         System.out.println(allKategori.getText());
+         Thread.sleep(1000);
+
+         WebElement xbutton=driver.findElement(By.xpath("//div[@class='nav-sprite hmenu-close-icon']"));
+         xbutton.click();
+         Thread.sleep(1000);
+
+         WebElement search= driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+         search.sendKeys("Les Miserables"+ Keys.ENTER);
+         Thread.sleep(1000);
+
+         WebElement result=driver.findElement(By.xpath("(//div[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
+         System.out.println("Result of Les Miserables : "+result.getText());
+
+         Assert.assertTrue(result.getText().contains("Les Miserables"));
+
+
+     }
+
+     @After
+    public void tearDown(){
+        driver.close();
+     }
+     */
