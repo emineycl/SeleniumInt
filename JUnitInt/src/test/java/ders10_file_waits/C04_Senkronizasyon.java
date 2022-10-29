@@ -5,7 +5,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import utilities.TestBase;
+
+import static utilities.TestBase.bekle;
 
 public class C04_Senkronizasyon {
     /*
@@ -54,7 +55,7 @@ Senkronizasyon problemlerinden java'dan 1, selenium'dan 2 yardimci vardir.
 
         // youtube'a gidip cookies'i kabul edip
         driver.get("https://www.youtube.com");
-        TestBase.bekle(5);
+        bekle(5);
        driver.findElement(By.xpath("//*[text()='Accept all']")).click();
 
         // ikinci video'ya tiklayalim

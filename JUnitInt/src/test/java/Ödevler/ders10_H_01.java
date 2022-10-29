@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.TestBase;
+
 
 public class ders10_H_01 extends TestBase {
     //  “http://webdriveruniversity.com/IFrame/index.html” sayfasina gidin

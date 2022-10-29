@@ -2,10 +2,12 @@ package Ödevler;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utilities.TestBase;
 
-public class ders08_H_01 extends TestBase {
+
+
+public class ders08_H_01  extends TestBase {
 // ● Bir class olusturun: IframeTest02
 //1) http://demo.guru99.com/test/guru99home/ sitesine gidiniz
 // 2) sayfadaki iframe sayısını bulunuz.
@@ -16,6 +18,7 @@ public class ders08_H_01 extends TestBase {
     @Test
     public void iframeTest02(){
         //1) http://demo.guru99.com/test/guru99home/ sitesine gidiniz
+
         driver.get("http://demo.guru99.com/test/guru99home/");
 
         // 2) sayfadaki iframe sayısını bulunuz.
@@ -41,3 +44,39 @@ public class ders08_H_01 extends TestBase {
         guruLink.click();
 }
 }
+
+/*
+package utilities;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
+
+public class TestBase {
+
+ public    WebDriver driver;
+    @Before
+    public void setUp(){
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().window().maximize();
+    }
+
+    @After
+    public void teardown(){
+        ;
+    }
+public static void bekle(int bekelnecekSaniye) throws InterruptedException {
+        try {
+        Thread.sleep(bekelnecekSaniye*1000);
+}catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+    }
+}
+ */

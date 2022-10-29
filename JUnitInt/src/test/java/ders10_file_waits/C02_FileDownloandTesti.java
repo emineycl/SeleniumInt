@@ -4,7 +4,6 @@ package ders10_file_waits;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
 import java.nio.file.Files;

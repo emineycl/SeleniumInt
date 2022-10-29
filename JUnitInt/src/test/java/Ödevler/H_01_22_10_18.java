@@ -48,15 +48,35 @@ public class H_01_22_10_18 {
     public void test01() throws InterruptedException {
         // click on the "Add Element" button 100 times
         driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
-
+        WebElement addCart = driver.findElement(By.xpath("//button[@onclick]"));
+        int baslangic = 0;
+        int bitis = 100;
         Thread.sleep(1000);
-        // write a function that takes a number, and clicks the "Delete" button
-        driver.findElement(By.xpath("(//button[@class='added-manually'])[3]")).click();
-    Thread.sleep(2000);
-        // given number of times, and then validates that given number of
-        // buttons was deleted
-driver.findElement(By.xpath("//button[@class='added-manually']")).click();
 
-    }
+        for (int i = baslangic; i <= bitis; addCart.click()) {
+            i++;
+            Thread.sleep(0, 5000);
 
+            // write a function that takes a number, and clicks the "Delete" button
+            driver.findElement(By.xpath("//button[@class='added-manually']")).click();
+            Thread.sleep(2000);
+            // given number of times, and then validates that given number of
+
+
+            // buttons was deleted
+            driver.findElement(By.xpath("//button[@class='added-manually']")).click();
+
+        }
+
+    }}
+/*
+WebElement addCart= driver.findElement(By.xpath("//button[@onclick]"));
+int baslangic=0;
+int bitis=100;
+Thread.sleep(1000);
+
+for (int i=baslangic;i <=bitis ;addCart.click()){
+    i++;
+    Thread.sleep(0,5000);
 }
+ */
