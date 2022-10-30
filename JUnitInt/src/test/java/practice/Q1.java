@@ -30,9 +30,6 @@ public class Q1 {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-
-
-
     }
     @AfterClass
     static public void tearDown(){

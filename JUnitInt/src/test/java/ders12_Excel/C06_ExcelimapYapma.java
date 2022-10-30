@@ -2,6 +2,7 @@ package ders12_Excel;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -49,7 +50,15 @@ public class C06_ExcelimapYapma {
         System.out.println(ulkelerMapi);
 
         //Ingilizce ismi Barbados olan ulkenin baskent isminin ingilizce olarak Bridgetown oldugunu test edin
+        String barbadosValue=ulkelerMapi.get("Barbados");
 
+        System.out.println(barbadosValue);   //Bridgetown, Barbados, Bridgetown
+        String[] barbadosValueArrayi= barbadosValue.split(", ");
+
+        String actualBaskentIsmi= barbadosValueArrayi[0];
+        String expectedBaskentIsmi="Bridgetown";
+
+        Assert.assertEquals(expectedBaskentIsmi,actualBaskentIsmi);
 
     }
 }
